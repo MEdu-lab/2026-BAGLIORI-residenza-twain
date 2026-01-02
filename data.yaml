@@ -26,7 +26,7 @@ autori:
   - nome_cognome: Giulio Romano De Mattia
     luogo_data_nascita: Roma, 12-03-2000
     link:
-      - https://example.com/giulio
+      - https://soundcloud.com/giulio-romano-de-mattia/tracks
     credits: |
       Musiche: Giulio De Mattia
 
@@ -41,7 +41,7 @@ referente:
 
 # --- Dettagli ---
 citta_provenienza: Roma
-link_video: https://vimeo.com/trailer-bagliori-rossellini
+link_video: https://www.youtube.com/watch?v=7BIc_XdjnQQ&t=3s
 
 tappe_lavoro: |
   • Novembre 2023: Residenza come artista satellite nell'ambito del programma RicercaX, Lavanderia a Vapore, Torino.
