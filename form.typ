@@ -91,8 +91,8 @@
 #let get_link_precedenti() = {
   let items = ()
   for autore in d.autori {
-    let links_str = autore.link.join(", ")
-    items.push([*#autore.nome_cognome:*\ #links_str])
+    let links_list = autore.link.map(l => [• #l]).join(linebreak())
+    items.push([*#autore.nome_cognome:*\ #links_list])
   }
   items.join([\ \ ])
 }
