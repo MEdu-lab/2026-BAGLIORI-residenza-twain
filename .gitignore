@@ -1,0 +1,19 @@
+# Output
+output/*.pdf
+
+# Typst
+*.typst.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Backup
+*.bak
+*~
