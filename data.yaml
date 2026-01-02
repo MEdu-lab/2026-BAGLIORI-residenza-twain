@@ -3,11 +3,16 @@
 # =============================================================================
 
 # --- Informazioni Artista/Progetto ---
-artista_compagnia: "Nome della Compagnia"
+artista_compagnia: "Marta Sponzilli"
 titolo_progetto: "Titolo del Progetto"
-autori: "Nome Cognome"
-luogo_data_nascita: "Roma, 01/01/1990"
-interpreti: "Interprete 1, Interprete 2"
+autori:
+  - nome_cognome: "Marta Sponzilli"
+    luogo_data_nascita: "Roma, 12-12-1980"
+  - nome_cognome: "Giulio Romano De Mattia"
+    luogo_data_nascita: "???, 12-03-2000"
+  - nome_cognome: "Marco Di Gasbarro"
+    luogo_data_nascita: "???, 01-01-1985"
+interpreti: autori
 
 # --- Referente Progetto ---
 referente:
