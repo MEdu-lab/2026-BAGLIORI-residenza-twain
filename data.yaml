@@ -1,3 +1,7 @@
+# =============================================================================
+# DATI PER IL FORM - Compila i campi sotto
+# =============================================================================
+# --- Informazioni Artista/Progetto ---
 artista_compagnia: Marta Sponzilli
 titolo_progetto: Bagliori
 
@@ -27,4 +31,37 @@ autori:
       Musiche: Giulio De Mattia
 
 interpreti: autori
-# ... resto invariato
+
+# --- Referente Progetto ---
+referente:
+  cognome: Sponzilli
+  nome: Marta
+  telefono: 348-3621504
+  email: martasponzilli@gmail.com
+
+# --- Dettagli ---
+citta_provenienza: Roma
+link_video: https://vimeo.com/trailer-bagliori-rossellini
+
+tappe_lavoro: |
+  • Novembre 2023: Residenza come artista satellite nell'ambito del programma RicercaX, Lavanderia a Vapore, Torino.
+  • Febbraio e aprile 2024: Laboratori aperti al pubblico presso Spazio Rossellini, Sharing In Rome e Fivizzano27, Roma.
+  • Agosto 2024: Residenza artistica a San Pablo Etla, Oaxaca, Messico. Borsa di studio Museo Nuria Rengifo (Ecuador).
+  • Settembre 2024: Residenza presso il Museo Anahuacalli, Città del Messico (museo progettato da Diego Rivera), con laboratorio aperto al pubblico.
+  • 5 ottobre 2024: Prima apertura del lavoro: Resplandores, Anatomías descentralizadas presso l'Istituto Italiano di Cultura, Città del Messico. Danza e coreografia: Marta Sponzilli. Suono: Ana Mayra Tang.
+  • 1° febbraio 2025: Presentazione dello studio presso Spazio Rossellini, Roma, nell'ambito di Sharing Blooms, SIR. Danza e coreografia: Marta Sponzilli. Suono: Marco Di Gasbarro.
+
+# --- Dati Amministrativi ---
+ragione_sociale:
+  nome_associazione: MEduLab
+  rappresentante_legale: Marco Di Gasbarro
+
+testi_siae: Nessuno
+musiche_siae: Nessuno
+coreografie_siae: Nessuno
+
+# --- Disponibilità ---
+disponibilita_marzo_2026: Confermo la disponibilità per marzo 2026
+
+# --- Firma ---
+data_luogo_firma: Roma, 01/01/2025
