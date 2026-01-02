@@ -1,6 +1,10 @@
+artista_compagnia: Marta Sponzilli
+titolo_progetto: Bagliori
+
 autori:
   - nome_cognome: Marta Sponzilli
     luogo_data_nascita: Roma, 12-12-1980
+    artista_compagnia: true
     link:
       - https://martasponzilli.blogspot.com/
       - https://www.facebook.com/marta.sponzilli/
@@ -11,17 +15,16 @@ autori:
   - nome_cognome: Marco Di Gasbarro
     luogo_data_nascita: Roma, 01-01-1985
     link:
-      - [eventuali suoi link]
+      - https://example.com/marco
     credits: |
-      Suono: Marco Di Gasbarro
+      Musiche: Marco Di Gasbarro
       
   - nome_cognome: Giulio Romano De Mattia
     luogo_data_nascita: Roma, 12-03-2000
     link:
-      - [eventuali suoi link]
+      - https://example.com/giulio
     credits: |
       Musiche: Giulio De Mattia
 
-ragione_sociale:
-  nome_associazione: MEduLab
-  rappresentante_legale: Marco Di Gasbarro
+interpreti: autori
+# ... resto invariato
