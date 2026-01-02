@@ -8,6 +8,8 @@ on:
       - 'form.typ'
       - 'templates/**'
       - 'assets/**'
+      - '.github/**'
+      
   workflow_dispatch:  # Permette build manuale
 
 permissions:
