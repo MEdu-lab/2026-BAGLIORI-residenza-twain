@@ -71,6 +71,53 @@
   text(weight: "medium", content)
 )
 
+// --- Funzioni helper per processare autori ---
+#let get_autori_nomi_nascita() = {
+  let items = ()
+  for autore in d.autori {
+    items.push([• #autore.nome_cognome (#autore.luogo_data_nascita)])
+  }
+  items.join(linebreak())
+}
+
+#let get_interpreti() = {
+  if d.interpreti == "autori" {
+    d.autori.map(a => a.nome_cognome).join(", ")
+  } else {
+    d.interpreti
+  }
+}
+
+#let get_link_precedenti() = {
+  let items = ()
+  for autore in d.autori {
+    let links_str = autore.link.join(", ")
+    items.push([*#autore.nome_cognome:*\ #links_str])
+  }
+  items.join([\ \ ])
+}
+
+#let get_credits() = {
+  let items = ()
+  for autore in d.autori {
+    items.push(autore.credits)
+  }
+  items.join([\ ])
+}
+
+#let get_sito_artista() = {
+  for autore in d.autori {
+    if "artista_compagnia" in autore and autore.artista_compagnia {
+      return autore.link.at(0)
+    }
+  }
+  return ""
+}
+
+#let get_ragione_sociale() = {
+  [Associazione Culturale #d.ragione_sociale.nome_associazione - Legale Rappresentante: #d.ragione_sociale.rappresentante_legale]
+}
+
 // --- Tabella Principale ---
 #table(
   columns: (35%, 65%),
@@ -78,9 +125,8 @@
   
   header-cell[Nome Artista/Compagnia], cell[#d.artista_compagnia],
   header-cell[Titolo del progetto], cell[#d.titolo_progetto],
-  header-cell[Nome/i autore/i], cell[#d.autori],
-  header-cell[Luogo e data di nascita autore/i autrice/i], cell[#d.luogo_data_nascita],
-  header-cell[Nominativi interpreti], cell[#d.interpreti],
+  header-cell[Nome/i autore/i e luogo e data di nascita], cell[#get_autori_nomi_nascita()],
+  header-cell[Nominativi interpreti], cell[#get_interpreti()],
   
   // Blocco Referente con rowspan
   table.cell(rowspan: 4, inset: 8pt, align: left + horizon, fill: luma(245))[
@@ -93,11 +139,11 @@
   
   header-cell[Città di provenienza Artista/Compagnia], cell[#d.citta_provenienza],
   header-cell[Link video progetto proposto], cell[#d.link_video],
-  header-cell[Eventuali link precedenti lavori già realizzati], cell[#d.link_lavori_precedenti],
-  header-cell[Sito o Fb della Artista/Compagnia], cell[#d.sito_fb],
+  header-cell[Eventuali link precedenti lavori già realizzati], cell[#get_link_precedenti()],
+  header-cell[Sito o Fb della Artista/Compagnia], cell[#get_sito_artista()],
   header-cell[Eventuali tappe di lavoro e date (residenze, anteprime, presentazioni di studi) già svolte o da svolgere], cell[#d.tappe_lavoro],
-  header-cell[Credits], cell[#d.credits],
-  header-cell[Ragione Sociale e nome legale rappresentante del soggetto (associazione, cooperativa, fondazione, etc) che emetterà fattura e fornirà Agibilità Ex-Enpals], cell[#d.ragione_sociale],
+  header-cell[Credits], cell[#get_credits()],
+  header-cell[Ragione Sociale e nome legale rappresentante del soggetto (associazione, cooperativa, fondazione, etc) che emetterà fattura e fornirà Agibilità Ex-Enpals], cell[#get_ragione_sociale()],
   header-cell[Eventuali testi tutelati dalla S.I.A.E.], cell[#d.testi_siae],
   header-cell[Eventuali musiche tutelate dalla S.I.A.E.], cell[#d.musiche_siae],
   header-cell[Eventuali coreografie tutelate dalla S.I.A.E.], cell[#d.coreografie_siae],
