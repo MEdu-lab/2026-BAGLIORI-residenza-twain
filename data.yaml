@@ -1,6 +1,8 @@
 # =============================================================================
 # DATI PER IL FORM - Compila i campi sotto
 # =============================================================================
+logo: logo.png
+
 # --- Informazioni Artista/Progetto ---
 artista_compagnia: Marta Sponzilli
 titolo_progetto: Bagliori
